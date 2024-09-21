@@ -32,7 +32,7 @@ const DropDownModal = ({ setGrouping, setOrdering,ordering,grouping }) => {
   const onGroupingChange = useCallback((e) => {
     setGrouping(e.target.value);
     console.log("hii");
-  }, []);
+  });
   const onOrderingChange = useCallback((e) => setOrdering(e.target.value), []);
 
   return (
