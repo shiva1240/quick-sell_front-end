@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import { useState, useEffect, useCallback } from "react";
 
@@ -26,7 +26,7 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  });
 
   const handleSetGrouping = (groupBy) => {
     setGrouping(groupBy);
@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     if (!tickets.length) return;
     setGridData(loadGrid(tickets, grouping, ordering, users));
-  }, [grouping, ordering, tickets]);
+  }, [grouping, ordering, tickets,users]);
 
   const saveLocalPreferences = useCallback((preferences) => {
     for (let key in preferences) {
