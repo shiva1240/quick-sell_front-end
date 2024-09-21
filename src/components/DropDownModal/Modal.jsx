@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import { useDetectClickOutside } from "react-detect-click-outside";
 
 
 function Modal({ openModal, closeModal, children, position,componentRef }) {

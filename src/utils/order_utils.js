@@ -46,19 +46,19 @@ export const userMapGenerator = (users, tickets) => {
   return map;
 };
 
-const groupTicketsByUserId = (tickets) => {
-  const groups = tickets.reduce(
-    (map, obj) => {
-      if (!map[obj.id]) {
-        map[obj.id] = [];
-      }
-      map[obj.id].push(obj);
-      return map;
-    },
-    { Backlog: [], Todo: [], "In progress": [], Done: [], Canceled: [] }
-  );
-  return groups;
-};
+// const groupTicketsByUserId = (tickets) => {
+//   const groups = tickets.reduce(
+//     (map, obj) => {
+//       if (!map[obj.id]) {
+//         map[obj.id] = [];
+//       }
+//       map[obj.id].push(obj);
+//       return map;
+//     },
+//     { Backlog: [], Todo: [], "In progress": [], Done: [], Canceled: [] }
+//   );
+//   return groups;
+// };
 
 const groupTicketsByPriority = (tickets) => {
   const groups = tickets.reduce(
